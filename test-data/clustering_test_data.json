@@ -1,0 +1,1502 @@
+[
+  {
+    "lead_uid": "1197737703",
+    "lead_type": "Probate",
+    "hierarchy_code": "V+H",
+    "property_address": "1209 Forbes St, Green Cove Springs, FL 32043",
+    "mailing_address": "3164 County Road 218 Middleburg, FL 32068",
+    "lat": 29.9934,
+    "lng": -81.69096,
+    "pin_color": "Red",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.1,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1197746592",
+    "lead_type": "Tax Delinquent",
+    "hierarchy_code": "V+T",
+    "property_address": "1213 Forbes St, Green Cove Springs, FL 32043",
+    "mailing_address": "810 Center St Green Cove Springs, FL 32043",
+    "lat": 29.993316,
+    "lng": -81.691125,
+    "pin_color": "Red",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.2,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273932757",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "616 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "616 N West St Green Cove Springs, FL 32043",
+    "lat": 30.001689,
+    "lng": -81.684124,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.1,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273932915",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "601 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "Po Box 112 Green Cove Springs, FL 32043",
+    "lat": 30.001185,
+    "lng": -81.683501,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.1,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273933221",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "607 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "607 N West St Green Cove Springs, FL 32043",
+    "lat": 30.001332,
+    "lng": -81.68368,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.1,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273933391",
+    "lead_type": "Probate",
+    "hierarchy_code": "V+H",
+    "property_address": "602 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "602 N West St Green Cove Springs, FL 32043",
+    "lat": 30.001555,
+    "lng": -81.684008,
+    "pin_color": "Red",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.1,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273933615",
+    "lead_type": "Tax Delinquent",
+    "hierarchy_code": "V+T",
+    "property_address": "520 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "Po Box 1162 Green Cove Springs, FL 32043",
+    "lat": 30.000632,
+    "lng": -81.682885,
+    "pin_color": "Red",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.1,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273934399",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "610 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "610 N West St Green Cove Springs, FL 32043",
+    "lat": 30.001815,
+    "lng": -81.684279,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.1,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273934571",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "612 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "612 N West St Green Cove Springs, FL 32043",
+    "lat": 30.001946,
+    "lng": -81.684414,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.1,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273934789",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "611 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "611 N West St Green Cove Springs, FL 32043",
+    "lat": 30.001426,
+    "lng": -81.683796,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.1,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273935201",
+    "lead_type": "Probate",
+    "hierarchy_code": "V+H",
+    "property_address": "702 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "702 N West St Green Cove Springs, FL 32043",
+    "lat": 30.002206,
+    "lng": -81.684711,
+    "pin_color": "Red",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.1,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273935409",
+    "lead_type": "Tax Delinquent",
+    "hierarchy_code": "V+T",
+    "property_address": "614 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "614 N West St Green Cove Springs, FL 32043",
+    "lat": 30.002078,
+    "lng": -81.684564,
+    "pin_color": "Red",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.1,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273935637",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "713 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "713 N West St Green Cove Springs, FL 32043",
+    "lat": 30.002167,
+    "lng": -81.684725,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.1,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273935817",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "708 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "708 N West St Green Cove Springs, FL 32043",
+    "lat": 30.002464,
+    "lng": -81.685031,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.2,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273936055",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "714 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "714 N West St Green Cove Springs, FL 32043",
+    "lat": 30.002715,
+    "lng": -81.685335,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.2,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273936239",
+    "lead_type": "Probate",
+    "hierarchy_code": "V+H",
+    "property_address": "718 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "718 N West St Green Cove Springs, FL 32043",
+    "lat": 30.002844,
+    "lng": -81.685493,
+    "pin_color": "Red",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.2,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273936381",
+    "lead_type": "Tax Delinquent",
+    "hierarchy_code": "V+T",
+    "property_address": "722 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "722 N West St Green Cove Springs, FL 32043",
+    "lat": 30.002973,
+    "lng": -81.68565,
+    "pin_color": "Red",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.2,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273936665",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "813 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "813 N West St Green Cove Springs, FL 32043",
+    "lat": 30.003001,
+    "lng": -81.68576,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.2,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273936885",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "802 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "802 N West St Green Cove Springs, FL 32043",
+    "lat": 30.003227,
+    "lng": -81.685966,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.3,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273937163",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "812 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "812 N West St Green Cove Springs, FL 32043",
+    "lat": 30.003507,
+    "lng": -81.68628,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.3,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273937419",
+    "lead_type": "Probate",
+    "hierarchy_code": "V+H",
+    "property_address": "824 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "824 N West St Green Cove Springs, FL 32043",
+    "lat": 30.003756,
+    "lng": -81.686588,
+    "pin_color": "Red",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.3,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273937583",
+    "lead_type": "Tax Delinquent",
+    "hierarchy_code": "V+T",
+    "property_address": "828 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "828 N West St Green Cove Springs, FL 32043",
+    "lat": 30.003882,
+    "lng": -81.68674,
+    "pin_color": "Red",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.3,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273937749",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "902 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "902 N West St Green Cove Springs, FL 32043",
+    "lat": 30.004114,
+    "lng": -81.68702,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.3,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273937989",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "906 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "906 N West St Green Cove Springs, FL 32043",
+    "lat": 30.004245,
+    "lng": -81.687178,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.3,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273938221",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "912 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "912 N West St Green Cove Springs, FL 32043",
+    "lat": 30.004456,
+    "lng": -81.687428,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.4,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273938433",
+    "lead_type": "Probate",
+    "hierarchy_code": "V+H",
+    "property_address": "918 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "918 N West St Green Cove Springs, FL 32043",
+    "lat": 30.004639,
+    "lng": -81.687645,
+    "pin_color": "Red",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.4,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273938645",
+    "lead_type": "Tax Delinquent",
+    "hierarchy_code": "V+T",
+    "property_address": "924 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "924 N West St Green Cove Springs, FL 32043",
+    "lat": 30.004838,
+    "lng": -81.687884,
+    "pin_color": "Red",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.4,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273938815",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "930 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "930 N West St Green Cove Springs, FL 32043",
+    "lat": 30.005022,
+    "lng": -81.688111,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.4,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273938997",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "1002 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "1002 N West St Green Cove Springs, FL 32043",
+    "lat": 30.005232,
+    "lng": -81.68836,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.5,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273939145",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "1006 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "1006 N West St Green Cove Springs, FL 32043",
+    "lat": 30.005353,
+    "lng": -81.688506,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.5,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273939337",
+    "lead_type": "Probate",
+    "hierarchy_code": "V+H",
+    "property_address": "1012 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "1012 N West St Green Cove Springs, FL 32043",
+    "lat": 30.005537,
+    "lng": -81.688725,
+    "pin_color": "Red",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.5,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273939513",
+    "lead_type": "Tax Delinquent",
+    "hierarchy_code": "V+T",
+    "property_address": "1018 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "1018 N West St Green Cove Springs, FL 32043",
+    "lat": 30.005719,
+    "lng": -81.688941,
+    "pin_color": "Red",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.5,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273939677",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "1024 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "1024 N West St Green Cove Springs, FL 32043",
+    "lat": 30.00591,
+    "lng": -81.689169,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.5,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273939857",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "1030 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "1030 N West St Green Cove Springs, FL 32043",
+    "lat": 30.006121,
+    "lng": -81.689422,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.6,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273940029",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "1102 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "1102 N West St Green Cove Springs, FL 32043",
+    "lat": 30.006325,
+    "lng": -81.689668,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.6,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273940179",
+    "lead_type": "Probate",
+    "hierarchy_code": "V+H",
+    "property_address": "1108 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "1108 N West St Green Cove Springs, FL 32043",
+    "lat": 30.006509,
+    "lng": -81.689885,
+    "pin_color": "Red",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.6,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273940347",
+    "lead_type": "Tax Delinquent",
+    "hierarchy_code": "V+T",
+    "property_address": "1112 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "1112 N West St Green Cove Springs, FL 32043",
+    "lat": 30.006637,
+    "lng": -81.69004,
+    "pin_color": "Red",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.6,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273940505",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "1118 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "1118 N West St Green Cove Springs, FL 32043",
+    "lat": 30.00684,
+    "lng": -81.690278,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.6,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273940669",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "1124 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "1124 N West St Green Cove Springs, FL 32043",
+    "lat": 30.007026,
+    "lng": -81.690497,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.7,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1273940823",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "C",
+    "property_address": "1130 N West St, Green Cove Springs, FL 32043",
+    "mailing_address": "1130 N West St Green Cove Springs, FL 32043",
+    "lat": 30.007231,
+    "lng": -81.690747,
+    "pin_color": "Standard",
+    "zone": "JAX - South Core",
+    "distance_miles": 12.7,
+    "tags": [
+      "Code Violations"
+    ]
+  },
+  {
+    "lead_uid": "1464303666",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "V+C",
+    "property_address": "624 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "624 Wellman St Palm Coast, FL 32164",
+    "lat": 29.560444,
+    "lng": -81.248383,
+    "pin_color": "Red",
+    "zone": "Palm Coast",
+    "distance_miles": 44.7,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464303721",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "100 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "100 Wellman St Palm Coast, FL 32164",
+    "lat": 29.563038,
+    "lng": -81.25203,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.4,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464303743",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "104 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "104 Wellman St Palm Coast, FL 32164",
+    "lat": 29.562919,
+    "lng": -81.251717,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.4,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464303775",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "108 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "108 Wellman St Palm Coast, FL 32164",
+    "lat": 29.562799,
+    "lng": -81.251401,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.5,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464303814",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "V+C",
+    "property_address": "112 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "112 Wellman St Palm Coast, FL 32164",
+    "lat": 29.56268,
+    "lng": -81.251086,
+    "pin_color": "Red",
+    "zone": "Palm Coast",
+    "distance_miles": 44.5,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464303848",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "116 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "116 Wellman St Palm Coast, FL 32164",
+    "lat": 29.56256,
+    "lng": -81.250772,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.5,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464303869",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "120 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "120 Wellman St Palm Coast, FL 32164",
+    "lat": 29.56244,
+    "lng": -81.250456,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.5,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464303911",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "124 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "124 Wellman St Palm Coast, FL 32164",
+    "lat": 29.562321,
+    "lng": -81.250141,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.5,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464303947",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "V+C",
+    "property_address": "128 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "128 Wellman St Palm Coast, FL 32164",
+    "lat": 29.5622,
+    "lng": -81.249826,
+    "pin_color": "Red",
+    "zone": "Palm Coast",
+    "distance_miles": 44.5,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464303975",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "132 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "132 Wellman St Palm Coast, FL 32164",
+    "lat": 29.56208,
+    "lng": -81.249511,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.5,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304018",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "136 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "136 Wellman St Palm Coast, FL 32164",
+    "lat": 29.561962,
+    "lng": -81.249195,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.5,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304052",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "140 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "140 Wellman St Palm Coast, FL 32164",
+    "lat": 29.56184,
+    "lng": -81.24888,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.6,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304073",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "V+C",
+    "property_address": "144 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "144 Wellman St Palm Coast, FL 32164",
+    "lat": 29.561722,
+    "lng": -81.248564,
+    "pin_color": "Red",
+    "zone": "Palm Coast",
+    "distance_miles": 44.6,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304116",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "148 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "148 Wellman St Palm Coast, FL 32164",
+    "lat": 29.561601,
+    "lng": -81.248249,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.6,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304153",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "152 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "152 Wellman St Palm Coast, FL 32164",
+    "lat": 29.561482,
+    "lng": -81.247934,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.6,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304172",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "156 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "156 Wellman St Palm Coast, FL 32164",
+    "lat": 29.56136,
+    "lng": -81.247618,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.6,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304212",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "V+C",
+    "property_address": "160 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "160 Wellman St Palm Coast, FL 32164",
+    "lat": 29.561241,
+    "lng": -81.247303,
+    "pin_color": "Red",
+    "zone": "Palm Coast",
+    "distance_miles": 44.7,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304253",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "164 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "164 Wellman St Palm Coast, FL 32164",
+    "lat": 29.561121,
+    "lng": -81.246987,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.7,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304273",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "200 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "200 Wellman St Palm Coast, FL 32164",
+    "lat": 29.561001,
+    "lng": -81.246672,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.7,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304325",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "204 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "204 Wellman St Palm Coast, FL 32164",
+    "lat": 29.56088,
+    "lng": -81.246358,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.7,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304347",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "V+C",
+    "property_address": "208 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "208 Wellman St Palm Coast, FL 32164",
+    "lat": 29.560761,
+    "lng": -81.246042,
+    "pin_color": "Red",
+    "zone": "Palm Coast",
+    "distance_miles": 44.7,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304394",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "212 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "212 Wellman St Palm Coast, FL 32164",
+    "lat": 29.560641,
+    "lng": -81.245727,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.8,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304416",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "216 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "216 Wellman St Palm Coast, FL 32164",
+    "lat": 29.560521,
+    "lng": -81.24541,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.8,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304467",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "300 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "300 Wellman St Palm Coast, FL 32164",
+    "lat": 29.560401,
+    "lng": -81.245095,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.8,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304488",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "V+C",
+    "property_address": "304 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "304 Wellman St Palm Coast, FL 32164",
+    "lat": 29.56028,
+    "lng": -81.244781,
+    "pin_color": "Red",
+    "zone": "Palm Coast",
+    "distance_miles": 44.8,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304533",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "308 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "308 Wellman St Palm Coast, FL 32164",
+    "lat": 29.560161,
+    "lng": -81.244465,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.9,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304562",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "312 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "312 Wellman St Palm Coast, FL 32164",
+    "lat": 29.56004,
+    "lng": -81.24415,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.9,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304602",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "316 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "316 Wellman St Palm Coast, FL 32164",
+    "lat": 29.559921,
+    "lng": -81.243834,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.9,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304631",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "V+C",
+    "property_address": "320 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "320 Wellman St Palm Coast, FL 32164",
+    "lat": 29.5598,
+    "lng": -81.243519,
+    "pin_color": "Red",
+    "zone": "Palm Coast",
+    "distance_miles": 44.9,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304668",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "400 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "400 Wellman St Palm Coast, FL 32164",
+    "lat": 29.55968,
+    "lng": -81.243204,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 44.9,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304705",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "404 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "404 Wellman St Palm Coast, FL 32164",
+    "lat": 29.55956,
+    "lng": -81.242889,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.0,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304732",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "408 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "408 Wellman St Palm Coast, FL 32164",
+    "lat": 29.559441,
+    "lng": -81.242573,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.0,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304753",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "V+C",
+    "property_address": "412 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "412 Wellman St Palm Coast, FL 32164",
+    "lat": 29.55932,
+    "lng": -81.242258,
+    "pin_color": "Red",
+    "zone": "Palm Coast",
+    "distance_miles": 45.0,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304791",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "416 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "416 Wellman St Palm Coast, FL 32164",
+    "lat": 29.559201,
+    "lng": -81.241943,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.0,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304816",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "500 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "500 Wellman St Palm Coast, FL 32164",
+    "lat": 29.55908,
+    "lng": -81.241628,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.0,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304856",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "504 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "504 Wellman St Palm Coast, FL 32164",
+    "lat": 29.558961,
+    "lng": -81.241312,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.1,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304885",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "V+C",
+    "property_address": "508 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "508 Wellman St Palm Coast, FL 32164",
+    "lat": 29.55884,
+    "lng": -81.240998,
+    "pin_color": "Red",
+    "zone": "Palm Coast",
+    "distance_miles": 45.1,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304921",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "512 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "512 Wellman St Palm Coast, FL 32164",
+    "lat": 29.558721,
+    "lng": -81.240683,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.1,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304944",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "516 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "516 Wellman St Palm Coast, FL 32164",
+    "lat": 29.558601,
+    "lng": -81.240367,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.1,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464304987",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "520 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "520 Wellman St Palm Coast, FL 32164",
+    "lat": 29.558481,
+    "lng": -81.240051,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.1,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305007",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "V+C",
+    "property_address": "600 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "600 Wellman St Palm Coast, FL 32164",
+    "lat": 29.55836,
+    "lng": -81.239737,
+    "pin_color": "Red",
+    "zone": "Palm Coast",
+    "distance_miles": 45.2,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305047",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "604 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "604 Wellman St Palm Coast, FL 32164",
+    "lat": 29.55824,
+    "lng": -81.239422,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.2,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305067",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "608 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "608 Wellman St Palm Coast, FL 32164",
+    "lat": 29.55812,
+    "lng": -81.239107,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.2,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305102",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "612 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "612 Wellman St Palm Coast, FL 32164",
+    "lat": 29.558001,
+    "lng": -81.238791,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.2,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305125",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "V+C",
+    "property_address": "616 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "616 Wellman St Palm Coast, FL 32164",
+    "lat": 29.55788,
+    "lng": -81.238477,
+    "pin_color": "Red",
+    "zone": "Palm Coast",
+    "distance_miles": 45.2,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305175",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "620 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "620 Wellman St Palm Coast, FL 32164",
+    "lat": 29.557761,
+    "lng": -81.238161,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.3,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305193",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "700 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "700 Wellman St Palm Coast, FL 32164",
+    "lat": 29.557641,
+    "lng": -81.237846,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.3,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305241",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "704 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "704 Wellman St Palm Coast, FL 32164",
+    "lat": 29.557521,
+    "lng": -81.23753,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.3,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305267",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "V+C",
+    "property_address": "708 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "708 Wellman St Palm Coast, FL 32164",
+    "lat": 29.557401,
+    "lng": -81.237215,
+    "pin_color": "Red",
+    "zone": "Palm Coast",
+    "distance_miles": 45.3,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305312",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "712 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "712 Wellman St Palm Coast, FL 32164",
+    "lat": 29.55728,
+    "lng": -81.236901,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.4,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305333",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "716 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "716 Wellman St Palm Coast, FL 32164",
+    "lat": 29.557161,
+    "lng": -81.236585,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.4,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305381",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "720 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "720 Wellman St Palm Coast, FL 32164",
+    "lat": 29.557041,
+    "lng": -81.23627,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.4,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305412",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "V+C",
+    "property_address": "800 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "800 Wellman St Palm Coast, FL 32164",
+    "lat": 29.55692,
+    "lng": -81.235955,
+    "pin_color": "Red",
+    "zone": "Palm Coast",
+    "distance_miles": 45.4,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305451",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "804 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "804 Wellman St Palm Coast, FL 32164",
+    "lat": 29.556801,
+    "lng": -81.23564,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.4,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305473",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "808 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "808 Wellman St Palm Coast, FL 32164",
+    "lat": 29.556681,
+    "lng": -81.235324,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.5,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305523",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "812 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "812 Wellman St Palm Coast, FL 32164",
+    "lat": 29.55656,
+    "lng": -81.23501,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.5,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305544",
+    "lead_type": "Code Violation",
+    "hierarchy_code": "V+C",
+    "property_address": "816 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "816 Wellman St Palm Coast, FL 32164",
+    "lat": 29.556441,
+    "lng": -81.234694,
+    "pin_color": "Red",
+    "zone": "Palm Coast",
+    "distance_miles": 45.5,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305586",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "820 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "820 Wellman St Palm Coast, FL 32164",
+    "lat": 29.556321,
+    "lng": -81.234379,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.5,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305612",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "900 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "900 Wellman St Palm Coast, FL 32164",
+    "lat": 29.556201,
+    "lng": -81.234064,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.5,
+    "tags": [
+      "New Prospect"
+    ]
+  },
+  {
+    "lead_uid": "1464305652",
+    "lead_type": "Foreclosure",
+    "hierarchy_code": "F",
+    "property_address": "904 Wellman St, Palm Coast, FL 32164",
+    "mailing_address": "904 Wellman St Palm Coast, FL 32164",
+    "lat": 29.55608,
+    "lng": -81.233749,
+    "pin_color": "Standard",
+    "zone": "Palm Coast",
+    "distance_miles": 45.6,
+    "tags": [
+      "New Prospect"
+    ]
+  }
+]

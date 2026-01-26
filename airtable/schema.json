@@ -1,0 +1,248 @@
+{
+  "base_name": "Pounce Map - Leads Database",
+  "tables": [
+    {
+      "name": "Leads",
+      "description": "Main table storing all property leads with scoring and metadata",
+      "fields": [
+        {
+          "name": "Household_ID",
+          "type": "singleLineText",
+          "description": "MD5 hash of normalized address + ZIP (primary key for deduplication)",
+          "required": true,
+          "unique": true
+        },
+        {
+          "name": "Property_Address",
+          "type": "singleLineText",
+          "description": "Physical address of the property"
+        },
+        {
+          "name": "Mailing_Address",
+          "type": "singleLineText",
+          "description": "Owner's mailing address (used for Lead_Type=N)"
+        },
+        {
+          "name": "City",
+          "type": "singleLineText"
+        },
+        {
+          "name": "State",
+          "type": "singleLineText"
+        },
+        {
+          "name": "ZIP",
+          "type": "singleLineText"
+        },
+        {
+          "name": "Lat",
+          "type": "number",
+          "precision": 6,
+          "description": "Latitude coordinate"
+        },
+        {
+          "name": "Lng",
+          "type": "number",
+          "precision": 6,
+          "description": "Longitude coordinate"
+        },
+        {
+          "name": "Deceased",
+          "type": "checkbox",
+          "description": "+45 points"
+        },
+        {
+          "name": "Tax_Auction",
+          "type": "checkbox",
+          "description": "Tax delinquent or foreclosure auction - +35 points"
+        },
+        {
+          "name": "Probate",
+          "type": "checkbox",
+          "description": "Heir/probate situation"
+        },
+        {
+          "name": "Vacant",
+          "type": "checkbox",
+          "description": "+25 points"
+        },
+        {
+          "name": "Distressed",
+          "type": "checkbox",
+          "description": "Physical distress or D4D tagged - +15 points"
+        },
+        {
+          "name": "Utility_Shutoff",
+          "type": "checkbox",
+          "description": "+10 points"
+        },
+        {
+          "name": "D4D",
+          "type": "checkbox",
+          "description": "Driving for Dollars tagged - +10 points"
+        },
+        {
+          "name": "Code_Violation",
+          "type": "checkbox",
+          "description": "City code violation"
+        },
+        {
+          "name": "Owner_Distance",
+          "type": "number",
+          "description": "Miles from owner's mailing address to property (+5 if >75 miles)"
+        },
+        {
+          "name": "Auction_Date",
+          "type": "date",
+          "description": "Date of tax/foreclosure auction"
+        },
+        {
+          "name": "Lead_Status",
+          "type": "singleSelect",
+          "options": ["Active", "Sold", "Dead"],
+          "description": "Current lead status"
+        },
+        {
+          "name": "Phone",
+          "type": "phoneNumber",
+          "description": "Primary contact phone (for data gap detection)"
+        },
+        {
+          "name": "GHL_Contact_ID",
+          "type": "singleLineText",
+          "description": "GoHighLevel contact ID for API sync"
+        },
+        {
+          "name": "Active_Phone_Index",
+          "type": "number",
+          "description": "Current phone rotation index from GHL"
+        },
+        {
+          "name": "Last_Note_Date",
+          "type": "date",
+          "description": "Last time note was logged from field"
+        },
+        {
+          "name": "Attempt_Count",
+          "type": "number",
+          "description": "Number of pounce attempts"
+        },
+        {
+          "name": "Total_Score",
+          "type": "formula",
+          "formula": "See formulas.md",
+          "description": "Calculated 0-100 heat score"
+        },
+        {
+          "name": "Pin_Color",
+          "type": "formula",
+          "formula": "See formulas.md",
+          "description": "red/orange/blue/purple/flash"
+        },
+        {
+          "name": "Badge_Letter",
+          "type": "formula",
+          "formula": "See formulas.md",
+          "description": "T/H/V/D/C priority letter"
+        },
+        {
+          "name": "Days_Until_Auction",
+          "type": "formula",
+          "formula": "See formulas.md",
+          "description": "Days remaining until auction"
+        },
+        {
+          "name": "Data_Gap",
+          "type": "formula",
+          "formula": "See formulas.md",
+          "description": "TRUE if score ≥50 but missing phone or mailing address"
+        },
+        {
+          "name": "Created_Date",
+          "type": "createdTime"
+        },
+        {
+          "name": "Last_Modified",
+          "type": "lastModifiedTime"
+        }
+      ],
+      "views": [
+        {
+          "name": "All Active Leads",
+          "type": "grid",
+          "filter": "Lead_Status = 'Active'"
+        },
+        {
+          "name": "Hot Leads (80+)",
+          "type": "grid",
+          "filter": "AND(Total_Score >= 80, Lead_Status = 'Active')",
+          "sort": [{"field": "Total_Score", "direction": "desc"}]
+        },
+        {
+          "name": "Auction Alert (<7 days)",
+          "type": "grid",
+          "filter": "AND(Days_Until_Auction <= 7, Days_Until_Auction >= 0, Lead_Status != 'Sold', Lead_Status != 'Dead')",
+          "sort": [{"field": "Days_Until_Auction", "direction": "asc"}]
+        },
+        {
+          "name": "Data Gaps",
+          "type": "grid",
+          "filter": "Data_Gap = TRUE()",
+          "description": "High-value leads missing critical contact info"
+        },
+        {
+          "name": "For JSON Export",
+          "type": "grid",
+          "filter": "AND(Lead_Status = 'Active', Lat != BLANK(), Lng != BLANK())",
+          "description": "Used by Make.com Scenario B to generate map feed"
+        },
+        {
+          "name": "Dead/DNC",
+          "type": "grid",
+          "filter": "Lead_Status = 'Dead'"
+        }
+      ]
+    },
+    {
+      "name": "Field_Notes",
+      "description": "Notes logged from the field via Airtable form",
+      "fields": [
+        {
+          "name": "Note_ID",
+          "type": "autoNumber"
+        },
+        {
+          "name": "Lead",
+          "type": "linkedRecord",
+          "linkedTable": "Leads",
+          "description": "Link to parent lead"
+        },
+        {
+          "name": "Note_Type",
+          "type": "singleSelect",
+          "options": ["Spoke to Owner", "Left Note", "Dead / DNC"],
+          "description": "Type of field interaction"
+        },
+        {
+          "name": "Photo",
+          "type": "attachment",
+          "description": "Photo of note/house"
+        },
+        {
+          "name": "Notes",
+          "type": "longText",
+          "description": "Additional field notes"
+        },
+        {
+          "name": "Timestamp",
+          "type": "createdTime"
+        },
+        {
+          "name": "User",
+          "type": "singleLineText",
+          "description": "User who logged note (from GHL or device)"
+        }
+      ]
+    }
+  ]
+}
