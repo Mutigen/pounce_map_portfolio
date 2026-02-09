@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#2563EB">
+  <title>Pounce Map</title>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/icon-192.svg">
+
+  <link rel="preconnect" href="https://maps.googleapis.com">
+  <link rel="dns-prefetch" href="https://maps.googleapis.com">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading Pounce Map...</div>
+    <div class="loading-count">0 leads loaded</div>
+  </div>
+
+  <!-- Map Container -->
+  <div id="map"></div>
+
+  <!-- Location Button -->
+  <button id="location-btn" class="location-btn" aria-label="Go to my location">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="3"/>
+      <path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>
+    </svg>
+  </button>
+
+  <!-- Bottom Sheet Popup -->
+  <div id="bottom-sheet" class="bottom-sheet hidden">
+    <div class="bottom-sheet-handle"></div>
+    <div class="bottom-sheet-content"></div>
+  </div>
+
+  <!-- Bottom Sheet Backdrop -->
+  <div id="bottom-sheet-backdrop" class="bottom-sheet-backdrop"></div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

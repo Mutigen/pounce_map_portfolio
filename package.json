@@ -1,0 +1,37 @@
+{
+  "name": "pounce-map",
+  "version": "2.3.1",
+  "private": true,
+  "type": "module",
+  "description": "Mobile field map for RE lead management - Google Maps, Airtable scoring, GHL kill switch",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mutigen/pounce-map.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mutigen/pounce-map/issues"
+  },
+  "homepage": "https://github.com/Mutigen/pounce-map#readme",
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^2.0.2",
+    "@googlemaps/markerclusterer": "^2.6.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  },
+  "devDependencies": {
+    "@types/google.maps": "^3.58.1",
+    "vite-plugin-pwa": "^1.2.0",
+    "workbox-precaching": "^7.4.0",
+    "workbox-routing": "^7.4.0",
+    "workbox-strategies": "^7.4.0"
+  }
+}

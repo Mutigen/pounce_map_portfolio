@@ -78,3 +78,31 @@ pounce-map/
 
 ## 📝 License
 Private project for client: Jerrelle Williams
+
+# Pounce Map - Make.com Scenarios
+
+## Scenario A: Data Ingest
+
+**Webhook URL:** `https://hook.eu2.make.com/[webhook-id]`
+
+### Expected Payload:
+```json
+{
+  "leads": [
+    {
+      "address": "123 Main St, Jacksonville, FL 32218",
+      "zip": "32218",
+      "lat": 30.12345,
+      "lng": -81.54321,
+      "property_type": "Code Violation"
+    }
+  ]
+}
+```
+
+### Testing:
+```bash
+curl -X POST https://hook.eu2.make.com/[webhook-id] \
+  -H "Content-Type: application/json" \
+  -d '{"leads": [...]}'
+```
