@@ -1,108 +1,160 @@
-# 🚀 Pounce Map v2.3.1
+# Pounce Map v2.3.1
 
-Mobile field map for real estate lead management - Jacksonville, FL
+Mobile-first field map for real estate lead management — built for Driving for Dollars workflows.
 
-## 📋 Project Overview
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7.x-646CFF?style=flat&logo=vite&logoColor=white)
+![Google Maps](https://img.shields.io/badge/Google%20Maps%20JS%20API-weekly-4285F4?style=flat&logo=googlemaps&logoColor=white)
+![PWA](https://img.shields.io/badge/PWA-ready-5A0FC8?style=flat&logo=pwa&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-deployed-000000?style=flat&logo=vercel&logoColor=white)
 
-High-performance mobile web application for "Driving for Dollars" - visualizing real estate leads with hybrid scoring logic (0-100 Heat Score + Context), merging data from multiple sources, and acting as manual override for GHL SMS outreach engine.
+---
 
-## 🏗️ Tech Stack
+## Overview
 
-- **Backend**: Airtable (database), Make.com (automation)
-- **Frontend**: Google Maps JavaScript API, Vanilla JS
-- **Integration**: GoHighLevel API
-- **Deployment**: Vercel
-- **Data Source**: DealMachine (address normalization)
+Pounce Map renders 2000+ real estate leads as interactive paddle pins on a Google Map, color-coded by a Heat Score system. Field agents open the app on mobile, tap a pin, and can navigate directly to the property or log a note — triggering a GHL kill switch that stops automated SMS outreach within 10 seconds.
 
-## 📦 Project Structure
+**Data flow:** DealMachine → Make.com → Airtable → JSON feed → Map
+
+---
+
+## Features
+
+- **Heat Score pins** — color-coded by urgency (flash / purple / red / orange / blue)
+- **Marker clustering** — smooth performance with 2000+ pins
+- **Bottom sheet** — swipeable property detail panel (iOS Maps-style)
+- **Navigate button** — deep links to Google Maps / Apple Maps
+- **Log Note button** — prefills Airtable form + fires GHL kill switch
+- **PWA** — installable on iOS and Android, works offline with cached tiles
+- **Auto-refresh** — pulls fresh lead data every 5 minutes
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | TypeScript, Vite, PWA (Workbox) |
+| Maps | Google Maps JavaScript API (AdvancedMarkerElement) |
+| Data | Make.com JSON feed via webhook |
+| CRM | GoHighLevel (kill switch via tag) |
+| Forms | Airtable (prefilled form via URL params) |
+| Deployment | Vercel |
+
+---
+
+## Project Structure
 
 ```
 pounce-map/
-├── frontend/           # Google Maps Web App
-│   ├── index.html
-│   ├── css/
-│   ├── js/
-│   └── assets/
-├── backend/            # Make.com Scenario Documentation
-│   ├── scenario-a-import.md
-│   ├── scenario-b-json.md
-│   └── scenario-c-ghl.md
-├── airtable/          # Airtable Formulas & Schema
-│   ├── schema.json
-│   ├── formulas.md
-│   └── views.md
-├── docs/              # Documentation
-│   ├── field-mapping-guide.md
-│   ├── ghl-integration.md
-│   └── deployment.md
-└── test-data/
-    └── clustering_test_data.json
+├── src/
+│   ├── main.ts              # App entry point
+│   ├── types.ts             # TypeScript interfaces
+│   ├── config.ts            # Environment config
+│   ├── data.ts              # JSON feed fetching & transformation
+│   ├── map.ts               # Google Maps initialization
+│   ├── markers.ts           # Marker rendering & clustering
+│   ├── pins.ts              # SVG paddle pin generation (cached)
+│   ├── bottom-sheet.ts      # Swipeable property detail panel
+│   ├── contacts.ts          # Contact card rendering
+│   ├── log-note.ts          # Kill switch & Airtable form
+│   ├── deep-links.ts        # iOS/Android navigation deep links
+│   ├── location.ts          # Geolocation
+│   └── utils.ts             # Helpers (log, debounce, escapeHtml)
+├── styles/
+│   ├── main.css
+│   └── bottom-sheet.css
+├── public/
+│   ├── favicon.svg
+│   ├── icon-192.svg
+│   └── icon-512.svg
+├── airtable/                # Airtable schema & formulas reference
+├── backend/                 # Make.com scenario documentation
+├── .env.example             # Environment variable template
+├── vite.config.ts
+├── tsconfig.json
+└── vercel.json
 ```
 
-## 🎯 Milestones
+---
 
-### Milestone 1: Backend Logic & GHL Integration (7 days) - $533.20
-- Airtable base with Heat Score formulas (0-100)
-- Household deduplication logic
-- Make.com scenarios: data ingest, JSON feed, GHL kill switch
-- GHL API integration validated (<10s response)
+## Deployment (Vercel)
 
-### Milestone 2: Frontend Map & Mobile UX (7 days) - $533.20
-- Mobile-first Google Maps JS web app
-- Custom paddle pins (score + color + badge)
-- Marker clustering for 2000+ pins
-- Auction flash animation
-- Bottom-sheet popup with Navigate + Log Note
+### 1. Import repository
 
-### Milestone 3: Integration Testing & Documentation (3 days) - $266.60
-- End-to-end field workflow testing
-- Deep-link validation (iOS/Android)
-- GHL feedback loop verification
-- Documentation & handoff
+Go to [vercel.com](https://vercel.com) → **Add New Project** → Import this Git repository.
 
-## 🚦 Getting Started
+### 2. Set environment variables
 
-### Prerequisites
-- Airtable workspace access
-- Make.com account
-- Google Maps API key
-- GHL Location-level API key
+In **Project Settings → Environment Variables**, add the following:
 
-### Setup
-[Will be updated after client provides API access]
+| Variable | Description |
+|---|---|
+| `VITE_GOOGLE_MAPS_API_KEY` | Google Maps JavaScript API key |
+| `VITE_GOOGLE_MAPS_MAP_ID` | Google Maps Map ID (required for AdvancedMarkerElement) |
+| `VITE_JSON_FEED_URL` | Make.com Scenario B webhook URL (JSON feed) |
+| `VITE_MAKE_WEBHOOK_URL` | Make.com Scenario C webhook URL (GHL kill switch) |
+| `VITE_AIRTABLE_FORM_URL` | Airtable form base URL (Log Note prefill) |
 
-## 📞 Client: Jerrelle Williams
-- Market Hub: 360 Bartram Market Dr, Jacksonville, FL 32259
-- GHL Workflows to stop: Workflow 08 (Phone Rotator), Workflow 11 (No Reply Handler)
-- Tag for kill switch: `status-engaged`
+See `.env.example` for reference.
 
-## 📝 License
-Private project for client: Jerrelle Williams
+### 3. Deploy
 
-# Pounce Map - Make.com Scenarios
+Vercel builds automatically on every push to `main`. Manual deploy:
 
-## Scenario A: Data Ingest
-
-**Webhook URL:** `https://hook.eu2.make.com/[webhook-id]`
-
-### Expected Payload:
-```json
-{
-  "leads": [
-    {
-      "address": "123 Main St, Jacksonville, FL 32218",
-      "zip": "32218",
-      "lat": 30.12345,
-      "lng": -81.54321,
-      "property_type": "Code Violation"
-    }
-  ]
-}
-```
-
-### Testing:
 ```bash
-curl -X POST https://hook.eu2.make.com/[webhook-id] \
-  -H "Content-Type: application/json" \
-  -d '{"leads": [...]}'
+npm run build
 ```
+
+---
+
+## Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Copy environment template
+cp .env.example .env.local
+# → Fill in your API keys in .env.local
+
+# Start dev server
+npm run dev
+
+# Type check
+npm run typecheck
+
+# Lint
+npm run lint
+```
+
+---
+
+## Heat Score Color Logic
+
+Priority order (highest overrides all):
+
+| Color | Condition |
+|---|---|
+| 🟠 Flash (pulsing) | Auction within 7 days |
+| 🟣 Purple | Score ≥ 50 + missing phone or address |
+| 🔴 Red | Score ≥ 80 |
+| 🟡 Orange | Score 50–79 |
+| 🔵 Blue | Score < 50 |
+
+---
+
+## Backend Documentation
+
+- [`backend/scenario-a-import.md`](backend/scenario-a-import.md) — Make.com CSV ingest
+- [`backend/scenario-b-json.md`](backend/scenario-b-json.md) — JSON feed generation
+- [`backend/scenario-c-ghl.md`](backend/scenario-c-ghl.md) — GHL kill switch
+- [`airtable/schema.json`](airtable/schema.json) — Airtable base schema
+- [`airtable/formulas.md`](airtable/formulas.md) — Heat Score formulas
+
+---
+
+## Built by
+
+**Levan (alias Mamiko) by MUT-i-GEN**
+GitHub: [@Mutigen](https://github.com/Mutigen)
