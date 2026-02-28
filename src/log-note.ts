@@ -2,7 +2,25 @@ import config from './config';
 import { log, showToast } from './utils';
 import type { Lead, KillSwitchPayload } from './types';
 
-/** Fire kill switch: POST ghl_contact_id to Make Scenario C (fire & forget) */
+const KILL_SWITCH_MAX_ATTEMPTS = 3;
+
+async function postWithRetry(url: string, payload: KillSwitchPayload): Promise<void> {
+  for (let attempt = 1; attempt <= KILL_SWITCH_MAX_ATTEMPTS; attempt++) {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    if (response.ok) return;
+    if (attempt < KILL_SWITCH_MAX_ATTEMPTS) {
+      await new Promise((resolve) => setTimeout(resolve, attempt * 1000));
+    } else {
+      throw new Error(`HTTP ${response.status} after ${KILL_SWITCH_MAX_ATTEMPTS} attempts`);
+    }
+  }
+}
+
+/** Fire kill switch: POST ghl_contact_id to Make Scenario C (retries up to 3x) */
 export function fireKillSwitch(lead: Lead): void {
   const payload: KillSwitchPayload = {
     household_id: lead.id,
@@ -12,12 +30,8 @@ export function fireKillSwitch(lead: Lead): void {
 
   log('Firing kill switch:', payload);
 
-  fetch(config.MAKE_WEBHOOK_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload),
-  }).catch((error) => {
-    log('Kill switch request failed:', error);
+  postWithRetry(config.MAKE_WEBHOOK_URL, payload).catch((error) => {
+    log('Kill switch failed after retries:', error);
     showToast('Kill switch failed — check connection', 'error');
   });
 }

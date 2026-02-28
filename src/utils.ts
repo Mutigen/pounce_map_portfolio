@@ -38,6 +38,16 @@ export function calculateDistance(
   return R * c;
 }
 
+/** Escape HTML special characters to prevent XSS when injecting into innerHTML */
+export function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 /** Show a toast notification */
 export function showToast(message: string, type: 'info' | 'error' = 'info'): void {
   const toast = document.createElement('div');

@@ -2,7 +2,7 @@ import { getMap } from './map';
 import { renderContactsSection } from './contacts';
 import { navigateToProperty } from './deep-links';
 import { fireKillSwitch, openAirtableForm } from './log-note';
-import { showToast } from './utils';
+import { showToast, escapeHtml } from './utils';
 import type { Lead } from './types';
 
 type SnapPoint = 0.3 | 0.6 | 0.9;
@@ -86,18 +86,18 @@ export class BottomSheet {
   }
 
   private renderContent(lead: Lead): void {
-    const displayScore = lead.display_score || String(lead.score);
+    const displayScore = escapeHtml(lead.display_score || String(lead.score));
     const scoreClass = this.getScoreClass(lead.color);
     const scoreLabel = this.getScoreLabel(scoreClass);
 
     this.content.innerHTML = `
       <div class="sheet-header">
-        <div class="sheet-address">${lead.address}</div>
+        <div class="sheet-address">${escapeHtml(lead.address)}</div>
       </div>
 
       <div class="sheet-pills">
         <span class="sheet-score-pill ${scoreClass}">Score: ${displayScore} (${scoreLabel})</span>
-        ${lead.lead_type ? `<span class="sheet-tag">${lead.lead_type}</span>` : ''}
+        ${lead.lead_type ? `<span class="sheet-tag">${escapeHtml(lead.lead_type)}</span>` : ''}
       </div>
 
       ${renderContactsSection(lead.contacts)}

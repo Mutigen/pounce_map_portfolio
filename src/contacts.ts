@@ -1,3 +1,4 @@
+import { escapeHtml } from './utils';
 import type { Contact, ContactStatus } from './types';
 
 const STATUS_ORDER: Record<ContactStatus, number> = {
@@ -40,21 +41,22 @@ function renderContactCard(contact: Contact): string {
       }</span>`
     : '';
 
-  const phoneLink = contact.phone
+  const safePhone = contact.phone ? escapeHtml(contact.phone) : null;
+  const phoneLink = safePhone
     ? `<div class="contact-phone-row">
-        <a href="tel:${contact.phone}" class="contact-phone">${contact.phone}</a>
+        <a href="tel:${safePhone}" class="contact-phone">${safePhone}</a>
       </div>`
     : '';
 
   return `<div class="contact-card ${bgClass}">
     <div class="contact-card-header">
       ${isPrimary ? '<span class="contact-star">&#11088;</span>' : ''}
-      <span class="contact-name">${contact.name}</span>
+      <span class="contact-name">${escapeHtml(contact.name)}</span>
       ${primaryBadge}
     </div>
     ${phoneLink}
     <div class="contact-meta">
-      <span>${contact.source}</span>
+      <span>${escapeHtml(contact.source)}</span>
     </div>
     ${statusTag ? `<div class="contact-status-row">${statusTag}</div>` : ''}
   </div>`;

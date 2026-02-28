@@ -20,17 +20,20 @@ export function clearMarkers(): void {
   }
 }
 
-/** Determine dominant color for a set of leads */
+/** Determine dominant color for a set of leads (mirrors heat score precedence) */
 function dominantColor(leads: Lead[]): PinColor {
   let flash = 0,
+    purple = 0,
     red = 0,
     orange = 0;
   for (const l of leads) {
     if (l.color === 'flash') flash++;
+    else if (l.color === 'purple') purple++;
     else if (l.color === 'red') red++;
     else if (l.color === 'orange') orange++;
   }
   if (flash > 0) return 'flash';
+  if (purple > 0) return 'purple';
   if (red > orange) return 'red';
   if (orange > 0) return 'orange';
   return 'blue';

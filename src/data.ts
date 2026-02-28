@@ -1,5 +1,5 @@
 import config from './config';
-import { log, showToast } from './utils';
+import { log } from './utils';
 import type {
   RawFeed,
   RawLead,
@@ -94,7 +94,18 @@ function parseRawLeads(data: unknown): Lead[] {
     throw new Error('Invalid JSON: expected { json: "..." }, array, or { leads: [...] }');
   }
 
-  return rawLeads.map(transformRawLead);
+  return rawLeads.map(transformRawLead).filter(isValidLead);
+}
+
+function isValidLead(lead: Lead): boolean {
+  return (
+    lead.lat !== 0 &&
+    lead.lng !== 0 &&
+    lead.lat >= -90 &&
+    lead.lat <= 90 &&
+    lead.lng >= -180 &&
+    lead.lng <= 180
+  );
 }
 
 // ---- Data Fetching ----
@@ -118,27 +129,8 @@ export async function fetchLeads(): Promise<Lead[]> {
     return cachedLeads;
   } catch (error) {
     log('Feed fetch failed:', error);
-
-    // In debug mode, try local test data
-    if (config.DEBUG) {
-      return fetchTestData();
-    }
-
     throw error;
   }
-}
-
-/** Fetch local test data for development */
-async function fetchTestData(): Promise<Lead[]> {
-  log('Falling back to test data...');
-  const response = await fetch('/test-data/mock-leads.json');
-
-  if (!response.ok) throw new Error('Test data not found');
-
-  const data: unknown = await response.json();
-  cachedLeads = parseRawLeads(data);
-  showToast(`Using test data (${cachedLeads.length} leads)`, 'info');
-  return cachedLeads;
 }
 
 /** Start auto-refresh timer (every 5 minutes) */
