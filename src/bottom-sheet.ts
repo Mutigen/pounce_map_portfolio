@@ -1,8 +1,9 @@
 import { getMap } from './map';
 import { renderContactsSection } from './contacts';
 import { navigateToProperty } from './deep-links';
-import { renderLogNoteForm, submitLogNote } from './log-note';
-import type { Lead, NoteType } from './types';
+import { fireKillSwitch, openAirtableForm } from './log-note';
+import { showToast } from './utils';
+import type { Lead } from './types';
 
 type SnapPoint = 0.3 | 0.6 | 0.9;
 const SNAP_POINTS: SnapPoint[] = [0.3, 0.6, 0.9];
@@ -14,8 +15,7 @@ export class BottomSheet {
   private handle: HTMLElement;
   private currentSnap: SnapPoint = 0.6;
   private currentLead: Lead | null = null;
-  private isOpen = false;
-  private showingForm = false;
+  private openedAt = 0;
 
   // Touch tracking
   private startY = 0;
@@ -32,8 +32,10 @@ export class BottomSheet {
   }
 
   private setupEventListeners(): void {
-    // Backdrop click to close
-    this.backdrop.addEventListener('click', () => this.close());
+    // Backdrop click to close — 300ms cooldown prevents ghost click from pin tap
+    this.backdrop.addEventListener('click', () => {
+      if (Date.now() - this.openedAt > 300) this.close();
+    });
 
     // Handle touch events for swipe gestures
     this.handle.addEventListener('touchstart', (e) => this.onTouchStart(e), { passive: true });
@@ -45,9 +47,8 @@ export class BottomSheet {
   }
 
   show(lead: Lead): void {
-    if (this.isOpen && this.showingForm) this.hideLogNoteForm();
+    this.openedAt = Date.now();
     this.currentLead = lead;
-    this.showingForm = false;
     this.renderContent(lead);
 
     // Pan map to center the pin
@@ -57,7 +58,6 @@ export class BottomSheet {
     // Show sheet and backdrop
     this.element.classList.remove('hidden');
     this.backdrop.classList.add('visible');
-    this.isOpen = true;
 
     // Animate to default snap point
     requestAnimationFrame(() => {
@@ -73,9 +73,7 @@ export class BottomSheet {
 
     setTimeout(() => {
       this.element.classList.add('hidden');
-      this.isOpen = false;
       this.currentLead = null;
-      this.showingForm = false;
     }, 200);
   }
 
@@ -92,35 +90,15 @@ export class BottomSheet {
     const scoreClass = this.getScoreClass(lead.color);
     const scoreLabel = this.getScoreLabel(scoreClass);
 
-    const cityState = [lead.city, lead.state].filter(Boolean).join(', ');
-    const location = [cityState, lead.zip].filter(Boolean).join(' ');
-
-    const tags = (lead.tags || []).filter(Boolean);
-
-    const daysUntilAuction = lead.days_until_auction;
-    const showAuction =
-      daysUntilAuction != null && daysUntilAuction <= 7 && daysUntilAuction >= 0;
-
     this.content.innerHTML = `
       <div class="sheet-header">
         <div class="sheet-address">${lead.address}</div>
-        ${location ? `<div class="sheet-location">${location}</div>` : ''}
       </div>
 
       <div class="sheet-pills">
         <span class="sheet-score-pill ${scoreClass}">Score: ${displayScore} (${scoreLabel})</span>
-        ${tags.map((tag) => `<span class="sheet-tag">${tag}</span>`).join('')}
+        ${lead.lead_type ? `<span class="sheet-tag">${lead.lead_type}</span>` : ''}
       </div>
-
-      ${
-        showAuction
-          ? `<div class="sheet-auction-row">
-              <span class="sheet-auction-icon">&#128293;</span>
-              <span class="sheet-auction-text">Auction in ${daysUntilAuction} day${daysUntilAuction !== 1 ? 's' : ''}</span>
-              ${lead.auction_date ? `<span class="sheet-auction-date">${lead.auction_date}</span>` : ''}
-            </div>`
-          : ''
-      }
 
       ${renderContactsSection(lead.contacts)}
 
@@ -147,73 +125,11 @@ export class BottomSheet {
     if (action === 'navigate') {
       navigateToProperty(this.currentLead.lat, this.currentLead.lng);
     } else if (action === 'log-note') {
-      this.showLogNoteForm();
-    } else if (action === 'cancel-form') {
-      this.hideLogNoteForm();
+      fireKillSwitch(this.currentLead);
+      openAirtableForm(this.currentLead);
+      showToast('Kill switch activated', 'info');
+      this.close();
     }
-  }
-
-  private showLogNoteForm(): void {
-    if (!this.currentLead) return;
-    this.showingForm = true;
-
-    const actionsEl = this.content.querySelector('#sheet-actions');
-    if (!actionsEl) return;
-
-    actionsEl.innerHTML = renderLogNoteForm();
-    this.snapTo(0.9);
-
-    // Bind form events
-    const form = this.content.querySelector('#log-note-form') as HTMLFormElement;
-    const cancelBtn = this.content.querySelector('#log-note-cancel');
-
-    cancelBtn?.addEventListener('click', () => this.hideLogNoteForm());
-
-    form?.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      if (!this.currentLead) return;
-
-      const noteType = (this.content.querySelector('#note-type') as HTMLSelectElement)?.value as NoteType;
-      const notes = (this.content.querySelector('#note-text') as HTMLTextAreaElement)?.value || '';
-
-      if (!noteType) return;
-
-      // Disable submit button
-      const submitBtn = this.content.querySelector('#log-note-submit') as HTMLButtonElement;
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending...';
-      }
-
-      const success = await submitLogNote(this.currentLead, noteType, notes);
-
-      if (success) {
-        this.close();
-      } else if (submitBtn) {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Submit';
-      }
-    });
-  }
-
-  private hideLogNoteForm(): void {
-    if (!this.currentLead) return;
-    this.showingForm = false;
-
-    const actionsEl = this.content.querySelector('#sheet-actions');
-    if (!actionsEl) return;
-
-    actionsEl.innerHTML = `
-      <button class="sheet-btn sheet-btn-navigate" data-action="navigate">
-        <span class="sheet-btn-icon">&#128663;</span>
-        NAVIGATE
-      </button>
-      <button class="sheet-btn sheet-btn-note" data-action="log-note">
-        <span class="sheet-btn-icon">&#128221;</span>
-        LOG NOTE
-      </button>
-    `;
-    this.snapTo(0.6);
   }
 
   // ---- Touch gesture handling ----

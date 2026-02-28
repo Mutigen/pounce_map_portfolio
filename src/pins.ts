@@ -27,14 +27,6 @@ export function createPaddlePinSvg(
     ? `stroke="${FLASH_BORDER_COLOR}" stroke-width="3"`
     : 'stroke="white" stroke-width="1.5"';
 
-  // Animated glow rings for flash pins
-  const flashRings = isFlash
-    ? `<circle cx="25" cy="20" r="28" fill="none" stroke="rgba(255,107,0,0.4)" stroke-width="4">
-        <animate attributeName="r" values="24;32;24" dur="1.5s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.6;0;0.6" dur="1.5s" repeatCount="indefinite"/>
-      </circle>`
-    : '';
-
   // Badge circle (16x16, top-right of paddle)
   const badgeMarkup = badge
     ? `<circle cx="42" cy="8" r="8"
@@ -48,7 +40,6 @@ export function createPaddlePinSvg(
     : '';
 
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="50" height="60" viewBox="0 0 50 60">
-  ${flashRings}
   <defs>
     <filter id="ds" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="rgba(0,0,0,0.3)"/>
@@ -71,27 +62,30 @@ export function createPaddlePinSvg(
   return svg;
 }
 
-/** Convert SVG string to data URL for google.maps.Marker icon */
+/** Convert SVG string to data URL */
 export function svgToDataUrl(svg: string): string {
   return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
 }
 
-/** Create a google.maps.Icon for a lead pin */
-export function createPinIcon(
+/**
+ * Create an HTMLElement for AdvancedMarkerElement.
+ * Flash pins get the CSS class 'pin-flash' for the pulse animation.
+ */
+export function createPinElement(
   score: string,
   color: PinColor,
   badge: BadgeLetter,
-): google.maps.Icon {
-  const svg = createPaddlePinSvg(score, color, badge);
-  return {
-    url: svgToDataUrl(svg),
-    scaledSize: new google.maps.Size(50, 60),
-    anchor: new google.maps.Point(25, 55),
-    labelOrigin: new google.maps.Point(25, 20),
-  };
+): HTMLElement {
+  const container = document.createElement('div');
+  container.style.cssText = 'width:50px;height:60px;cursor:pointer;';
+  if (color === 'flash') {
+    container.className = 'pin-flash';
+  }
+  container.innerHTML = createPaddlePinSvg(score, color, badge);
+  return container;
 }
 
-/** Create a cluster icon with dominant color */
+/** Create a cluster icon SVG with dominant color */
 export function createClusterSvg(count: number, color: PinColor): string {
   const fill = PIN_COLORS[color] || PIN_COLORS.blue;
   const size = Math.min(50 + Math.floor(count / 100) * 5, 80);

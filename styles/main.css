@@ -1,3 +1,14 @@
+/* ---- Flash Pin Pulse Animation ---- */
+@keyframes pin-pulse {
+  0%, 100% { transform: scale(1);     filter: drop-shadow(0 0 4px rgba(255, 107, 0, 0.5)); }
+  50%       { transform: scale(1.18); filter: drop-shadow(0 0 10px rgba(255, 107, 0, 0.9)); }
+}
+
+.pin-flash {
+  animation: pin-pulse 1.4s ease-in-out infinite;
+  transform-origin: 25px 55px; /* anchor point = stem tip */
+}
+
 /* ---- Reset & Base ---- */
 *, *::before, *::after {
   box-sizing: border-box;

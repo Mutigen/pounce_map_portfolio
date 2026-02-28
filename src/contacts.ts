@@ -40,13 +40,6 @@ function renderContactCard(contact: Contact): string {
       }</span>`
     : '';
 
-  const confidenceIcon =
-    contact.confidence === 'high'
-      ? '<span class="confidence-dot confidence-high"></span>'
-      : contact.confidence === 'med'
-        ? '<span class="confidence-dot confidence-med"></span>'
-        : '<span class="confidence-dot confidence-low"></span>';
-
   const phoneLink = contact.phone
     ? `<div class="contact-phone-row">
         <a href="tel:${contact.phone}" class="contact-phone">${contact.phone}</a>
@@ -59,10 +52,8 @@ function renderContactCard(contact: Contact): string {
       <span class="contact-name">${contact.name}</span>
       ${primaryBadge}
     </div>
-    <div class="contact-relationship">${contact.relationship}</div>
     ${phoneLink}
     <div class="contact-meta">
-      <span>${confidenceIcon} ${contact.confidence.toUpperCase()}</span>
       <span>${contact.source}</span>
     </div>
     ${statusTag ? `<div class="contact-status-row">${statusTag}</div>` : ''}

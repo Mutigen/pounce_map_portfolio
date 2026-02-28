@@ -8,7 +8,11 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write src/",
+    "format:check": "prettier --check src/"
   },
   "repository": {
     "type": "git",
@@ -28,7 +32,12 @@
     "vite": "^7.3.1"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/google.maps": "^3.58.1",
+    "eslint": "^10.0.1",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.1",
+    "typescript-eslint": "^8.56.0",
     "vite-plugin-pwa": "^1.2.0",
     "workbox-precaching": "^7.4.0",
     "workbox-routing": "^7.4.0",

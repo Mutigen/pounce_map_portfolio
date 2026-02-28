@@ -15,10 +15,10 @@ export async function initMap(): Promise<google.maps.Map> {
   setOptions({
     key: config.GOOGLE_MAPS_API_KEY,
     v: 'weekly',
-    libraries: ['places'],
   });
 
   await importLibrary('maps');
+  await importLibrary('marker');
 
   log('Google Maps API loaded, initializing map...');
 
@@ -30,7 +30,7 @@ export async function initMap(): Promise<google.maps.Map> {
     zoom: config.MAP.zoom,
     minZoom: config.MAP.minZoom,
     maxZoom: config.MAP.maxZoom,
-    styles: config.MAP.styles as unknown as google.maps.MapTypeStyle[],
+    mapId: config.GOOGLE_MAPS_MAP_ID,
     mapTypeControl: config.MAP.mapTypeControl,
     streetViewControl: config.MAP.streetViewControl,
     fullscreenControl: config.MAP.fullscreenControl,

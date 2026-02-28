@@ -1,7 +1,8 @@
-import type { PinColor, NoteType } from './types';
+import type { PinColor } from './types';
 
 const config = {
   GOOGLE_MAPS_API_KEY: import.meta.env.VITE_GOOGLE_MAPS_API_KEY ?? '',
+  GOOGLE_MAPS_MAP_ID: import.meta.env.VITE_GOOGLE_MAPS_MAP_ID ?? '',
   JSON_FEED_URL: import.meta.env.VITE_JSON_FEED_URL ?? '',
   MAKE_WEBHOOK_URL: import.meta.env.VITE_MAKE_WEBHOOK_URL ?? '',
   AIRTABLE_FORM_URL: import.meta.env.VITE_AIRTABLE_FORM_URL ?? '',
@@ -63,15 +64,6 @@ const config = {
     orange: 2000,
     blue: 1000,
   } as Record<PinColor, number>,
-
-  NOTE_TYPES: [
-    'Spoke to Owner',
-    'Left Note',
-    'Left Door Hanger',
-    'Dead / DNC',
-    'No Access',
-    'Hostile Owner',
-  ] as NoteType[],
 } as const;
 
 export default config;

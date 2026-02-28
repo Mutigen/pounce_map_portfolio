@@ -14,7 +14,12 @@ export function navigateToProperty(lat: number, lng: number): void {
       window.location.href = appleMapsUrl;
     }, 500);
   } else if (isAndroid) {
-    window.location.href = `google.navigation:q=${lat},${lng}&mode=d`;
+    // https:// lets Chrome on Android prompt to open Google Maps app (or fallback to browser)
+    // Avoids "no registered handler" error when google.navigation: scheme is unavailable
+    window.open(
+      `https://maps.google.com/maps?daddr=${lat},${lng}&dirflg=d`,
+      '_blank',
+    );
   } else {
     // Desktop fallback: browser Google Maps
     window.open(

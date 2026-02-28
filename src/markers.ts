@@ -1,20 +1,18 @@
 import { MarkerClusterer, GridAlgorithm } from '@googlemaps/markerclusterer';
 import config from './config';
-import { createPinIcon, createClusterSvg, svgToDataUrl } from './pins';
+import { createPinElement, createClusterSvg, svgToDataUrl } from './pins';
 import { getMap } from './map';
 import { log } from './utils';
 import type { Lead, PinColor } from './types';
 
-interface LeadMarker extends google.maps.Marker {
-  _lead?: Lead;
-}
+type AdvancedMarker = google.maps.marker.AdvancedMarkerElement & { _lead?: Lead };
 
-let markers: LeadMarker[] = [];
+let markers: AdvancedMarker[] = [];
 let clusterer: MarkerClusterer | null = null;
 
 /** Clear all markers and clustering */
 export function clearMarkers(): void {
-  for (const m of markers) m.setMap(null);
+  for (const m of markers) m.map = null;
   markers = [];
   if (clusterer) {
     clusterer.clearMarkers();
@@ -49,15 +47,15 @@ export function renderLeads(
   log(`Rendering ${leads.length} leads`);
 
   for (const lead of leads) {
-    const marker: LeadMarker = new google.maps.Marker({
+    const marker = new google.maps.marker.AdvancedMarkerElement({
       position: { lat: lead.lat, lng: lead.lng },
-      icon: createPinIcon(lead.display_score, lead.color, lead.badge),
+      content: createPinElement(lead.display_score, lead.color, lead.badge),
       title: lead.address,
-      optimized: true,
       zIndex: config.PIN_Z_INDEX[lead.color] || 1000,
-    });
+      gmpClickable: true,
+    }) as AdvancedMarker;
 
-    marker.addListener('click', () => onPinClick(lead));
+    marker.addListener('gmp-click', () => onPinClick(lead));
     marker._lead = lead;
     markers.push(marker);
   }
@@ -75,7 +73,7 @@ export function renderLeads(
     renderer: {
       render({ count, position, markers: clusterMarkers }) {
         const clusterLeads = (clusterMarkers || [])
-          .map((m) => (m as LeadMarker)._lead)
+          .map((m) => (m as AdvancedMarker)._lead)
           .filter((l): l is Lead => l != null);
         const dominant = dominantColor(clusterLeads);
         const svg = createClusterSvg(count, dominant);

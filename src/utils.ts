@@ -3,7 +3,7 @@ import config from './config';
 /** Debug logger — only logs when VITE_DEBUG=true, stripped in prod by terser */
 export function log(...args: unknown[]): void {
   if (config.DEBUG) {
-    console.log('[Pounce Map]', ...args);
+    console.log('[Pounce Map]', ...args); // eslint-disable-line no-console
   }
 }
 
