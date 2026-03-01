@@ -1,0 +1,292 @@
+[
+  {
+    "Household_ID": "demo-001",
+    "GHL_Contact_ID": "ghl-demo-001",
+    "Lat": 30.3322,
+    "Lng": -81.6557,
+    "Heat_Score": "92",
+    "Context_Badge": "V",
+    "Pin_Color": "flash",
+    "DealMashine_Normalized_Address": "1842 Edgewood Ave W, Jacksonville, FL 32208",
+    "Lead_Typ": "Vacant",
+    "contacts": [
+      {
+        "Contact_Name": "Marcus Williams",
+        "Phone_1": "9042551847",
+        "Contact_Status": "primary",
+        "Source": "DealMachine"
+      }
+    ]
+  },
+  {
+    "Household_ID": "demo-002",
+    "GHL_Contact_ID": "ghl-demo-002",
+    "Lat": 30.2850,
+    "Lng": -81.7200,
+    "Heat_Score": "87",
+    "Context_Badge": "T",
+    "Pin_Color": "red",
+    "DealMashine_Normalized_Address": "4231 Fireside Ln, Jacksonville, FL 32210",
+    "Lead_Typ": "Tax Delinquent",
+    "contacts": [
+      {
+        "Contact_Name": "Patricia Johnson",
+        "Phone_1": "9047823491",
+        "Contact_Status": "primary",
+        "Source": "DealMachine"
+      },
+      {
+        "Contact_Name": "Robert Johnson",
+        "Phone_1": "9046612038",
+        "Contact_Status": "candidate",
+        "Source": "Skip Trace"
+      }
+    ]
+  },
+  {
+    "Household_ID": "demo-003",
+    "GHL_Contact_ID": "",
+    "Lat": 30.2672,
+    "Lng": -81.5900,
+    "Heat_Score": "78",
+    "Context_Badge": "H",
+    "Pin_Color": "orange",
+    "DealMashine_Normalized_Address": "917 Hendricks Ave, Jacksonville, FL 32207",
+    "Lead_Typ": "High Equity",
+    "contacts": [
+      {
+        "Contact_Name": "Sandra Lee",
+        "Phone_1": "9043389201",
+        "Contact_Status": "primary",
+        "Source": "DealMachine"
+      }
+    ]
+  },
+  {
+    "Household_ID": "demo-004",
+    "GHL_Contact_ID": "ghl-demo-004",
+    "Lat": 30.2400,
+    "Lng": -81.6800,
+    "Heat_Score": "63",
+    "Context_Badge": "D",
+    "Pin_Color": "orange",
+    "DealMashine_Normalized_Address": "2718 Post St, Jacksonville, FL 32204",
+    "Lead_Typ": "Divorce",
+    "contacts": [
+      {
+        "Contact_Name": "Thomas Green",
+        "Phone_1": "9041187654",
+        "Contact_Status": "candidate",
+        "Source": "DealMachine"
+      }
+    ]
+  },
+  {
+    "Household_ID": "demo-005",
+    "GHL_Contact_ID": "",
+    "Lat": 30.3150,
+    "Lng": -81.6250,
+    "Heat_Score": "55",
+    "Context_Badge": "",
+    "Pin_Color": "purple",
+    "DealMashine_Normalized_Address": "5504 Merrill Rd, Jacksonville, FL 32211",
+    "Lead_Typ": "Vacant",
+    "contacts": []
+  },
+  {
+    "Household_ID": "demo-006",
+    "GHL_Contact_ID": "ghl-demo-006",
+    "Lat": 30.2100,
+    "Lng": -81.6100,
+    "Heat_Score": "38",
+    "Context_Badge": "C",
+    "Pin_Color": "blue",
+    "DealMashine_Normalized_Address": "3309 Beachwood Ct, Jacksonville, FL 32207",
+    "Lead_Typ": "Code Violation",
+    "contacts": [
+      {
+        "Contact_Name": "Angela Foster",
+        "Phone_1": "9049923417",
+        "Contact_Status": "primary",
+        "Source": "DealMachine"
+      }
+    ]
+  },
+  {
+    "Household_ID": "demo-007",
+    "GHL_Contact_ID": "",
+    "Lat": 30.3500,
+    "Lng": -81.7000,
+    "Heat_Score": "22",
+    "Context_Badge": "",
+    "Pin_Color": "blue",
+    "DealMashine_Normalized_Address": "1120 Duval Station Rd, Jacksonville, FL 32218",
+    "Lead_Typ": "Absentee Owner",
+    "contacts": [
+      {
+        "Contact_Name": "Kevin Brown",
+        "Phone_1": null,
+        "Contact_Status": "candidate",
+        "Source": "Skip Trace"
+      }
+    ]
+  },
+  {
+    "Household_ID": "demo-008",
+    "GHL_Contact_ID": "ghl-demo-008",
+    "Lat": 30.2950,
+    "Lng": -81.5700,
+    "Heat_Score": "81",
+    "Context_Badge": "V",
+    "Pin_Color": "red",
+    "DealMashine_Normalized_Address": "7820 Beach Blvd, Jacksonville, FL 32216",
+    "Lead_Typ": "Vacant",
+    "contacts": [
+      {
+        "Contact_Name": "Denise Carter",
+        "Phone_1": "9048841563",
+        "Contact_Status": "primary",
+        "Source": "DealMachine"
+      },
+      {
+        "Contact_Name": "James Carter",
+        "Phone_1": "9048841564",
+        "Contact_Status": "wrong",
+        "Source": "Skip Trace"
+      }
+    ]
+  },
+  {
+    "Household_ID": "demo-009",
+    "GHL_Contact_ID": "",
+    "Lat": 30.2550,
+    "Lng": -81.7400,
+    "Heat_Score": "67",
+    "Context_Badge": "T",
+    "Pin_Color": "orange",
+    "DealMashine_Normalized_Address": "3641 Blanding Blvd, Jacksonville, FL 32210",
+    "Lead_Typ": "Tax Delinquent",
+    "contacts": [
+      {
+        "Contact_Name": "Roy Mitchell",
+        "Phone_1": "9042206778",
+        "Contact_Status": "dnc",
+        "Source": "DealMachine"
+      }
+    ]
+  },
+  {
+    "Household_ID": "demo-010",
+    "GHL_Contact_ID": "ghl-demo-010",
+    "Lat": 30.3750,
+    "Lng": -81.5950,
+    "Heat_Score": "15",
+    "Context_Badge": "",
+    "Pin_Color": "blue",
+    "DealMashine_Normalized_Address": "890 Yellow Bluff Rd, Jacksonville, FL 32218",
+    "Lead_Typ": "Absentee Owner",
+    "contacts": [
+      {
+        "Contact_Name": "Shirley Adams",
+        "Phone_1": "9043314892",
+        "Contact_Status": "inactive",
+        "Source": "DealMachine"
+      }
+    ]
+  },
+  {
+    "Household_ID": "demo-011",
+    "GHL_Contact_ID": "ghl-demo-011",
+    "Lat": 30.2720,
+    "Lng": -81.6700,
+    "Heat_Score": "94",
+    "Context_Badge": "H",
+    "Pin_Color": "flash",
+    "DealMashine_Normalized_Address": "2234 Roosevelt Blvd, Jacksonville, FL 32210",
+    "Lead_Typ": "High Equity",
+    "contacts": [
+      {
+        "Contact_Name": "Walter Hayes",
+        "Phone_1": "9046630912",
+        "Contact_Status": "primary",
+        "Source": "DealMachine"
+      }
+    ]
+  },
+  {
+    "Household_ID": "demo-012",
+    "GHL_Contact_ID": "",
+    "Lat": 30.2200,
+    "Lng": -81.5600,
+    "Heat_Score": "52",
+    "Context_Badge": "",
+    "Pin_Color": "purple",
+    "DealMashine_Normalized_Address": "1504 Flagler Ave, Jacksonville, FL 32207",
+    "Lead_Typ": "Probate",
+    "contacts": [
+      {
+        "Contact_Name": "Unknown",
+        "Phone_1": null,
+        "Contact_Status": "candidate",
+        "Source": "DealMachine"
+      }
+    ]
+  },
+  {
+    "Household_ID": "demo-013",
+    "GHL_Contact_ID": "ghl-demo-013",
+    "Lat": 30.3100,
+    "Lng": -81.7300,
+    "Heat_Score": "44",
+    "Context_Badge": "V",
+    "Pin_Color": "blue",
+    "DealMashine_Normalized_Address": "6612 Normandy Blvd, Jacksonville, FL 32205",
+    "Lead_Typ": "Vacant",
+    "contacts": [
+      {
+        "Contact_Name": "Dorothy King",
+        "Phone_1": "9047751230",
+        "Contact_Status": "primary",
+        "Source": "DealMachine"
+      }
+    ]
+  },
+  {
+    "Household_ID": "demo-014",
+    "GHL_Contact_ID": "ghl-demo-014",
+    "Lat": 30.2480,
+    "Lng": -81.6300,
+    "Heat_Score": "89",
+    "Context_Badge": "D",
+    "Pin_Color": "red",
+    "DealMashine_Normalized_Address": "3318 St Augustine Rd, Jacksonville, FL 32207",
+    "Lead_Typ": "Divorce",
+    "contacts": [
+      {
+        "Contact_Name": "Lawrence Turner",
+        "Phone_1": "9042948831",
+        "Contact_Status": "primary",
+        "Source": "DealMachine"
+      }
+    ]
+  },
+  {
+    "Household_ID": "demo-015",
+    "GHL_Contact_ID": "",
+    "Lat": 30.3650,
+    "Lng": -81.6650,
+    "Heat_Score": "31",
+    "Context_Badge": "C",
+    "Pin_Color": "blue",
+    "DealMashine_Normalized_Address": "9105 Lem Turner Rd, Jacksonville, FL 32208",
+    "Lead_Typ": "Code Violation",
+    "contacts": [
+      {
+        "Contact_Name": "Frances Evans",
+        "Phone_1": "9041102967",
+        "Contact_Status": "candidate",
+        "Source": "Skip Trace"
+      }
+    ]
+  }
+]

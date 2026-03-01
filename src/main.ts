@@ -5,7 +5,7 @@ import '../styles/loading.css';
 import { initMap, fitBoundsToLeads } from './map';
 import { renderLeads } from './markers';
 import { BottomSheet } from './bottom-sheet';
-import { fetchLeads, startAutoRefresh } from './data';
+import { fetchLeads, startAutoRefresh, isDemoMode } from './data';
 import { goToUserLocation } from './location';
 import { log, showToast } from './utils';
 import type { Lead } from './types';
@@ -39,16 +39,23 @@ async function init(): Promise<void> {
       showToast('No leads found', 'info');
     }
 
-    // 5. Start auto-refresh (every 5 minutes)
-    startAutoRefresh((leads) => {
-      currentLeads = leads;
-      renderLeads(leads, handlePinClick);
-    });
+    // 5. Start auto-refresh (every 5 minutes, skip in demo mode)
+    if (!isDemoMode) {
+      startAutoRefresh((leads) => {
+        currentLeads = leads;
+        renderLeads(leads, handlePinClick);
+      });
+    }
 
     // 6. Setup location button
     setupLocationButton();
 
-    // 7. Hide loading screen
+    // 7. Show demo banner if needed
+    if (isDemoMode) {
+      showDemoBanner();
+    }
+
+    // 8. Hide loading screen
     hideLoading(loadingScreen);
 
     log('Pounce Map ready');
@@ -68,6 +75,13 @@ function setupLocationButton(): void {
   btn?.addEventListener('click', () => {
     goToUserLocation(currentLeads);
   });
+}
+
+function showDemoBanner(): void {
+  const banner = document.createElement('div');
+  banner.id = 'demo-banner';
+  banner.textContent = '⚡ DEMO MODE — sample data only';
+  document.body.appendChild(banner);
 }
 
 function hideLoading(el: HTMLElement | null): void {

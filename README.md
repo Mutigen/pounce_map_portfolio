@@ -8,6 +8,8 @@ Mobile-first field map for real estate lead management — built for Driving for
 ![PWA](https://img.shields.io/badge/PWA-ready-5A0FC8?style=flat&logo=pwa&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-deployed-000000?style=flat&logo=vercel&logoColor=white)
 
+> **This is the public portfolio version.** It runs in Demo Mode with sample leads — no real client data. See [CASE_STUDY.md](./CASE_STUDY.md) for the full project writeup.
+
 ---
 
 ## Overview
@@ -15,6 +17,8 @@ Mobile-first field map for real estate lead management — built for Driving for
 Pounce Map renders 2000+ real estate leads as interactive paddle pins on a Google Map, color-coded by a Heat Score system. Field agents open the app on mobile, tap a pin, and can navigate directly to the property or log a note — triggering a GHL kill switch that stops automated SMS outreach within 10 seconds.
 
 **Data flow:** DealMachine → Make.com → Airtable → JSON feed → Map
+
+**Demo mode:** When `VITE_JSON_FEED_URL` is not set, the app automatically loads `/demo-data.json` (15 sample leads). Kill switch and Airtable form are disabled in demo mode.
 
 ---
 
@@ -80,13 +84,19 @@ pounce-map/
 
 ## Deployment (Vercel)
 
-### 1. Import repository
+### Demo deployment (portfolio / no client data)
 
-Go to [vercel.com](https://vercel.com) → **Add New Project** → Import this Git repository.
+1. Go to [vercel.com](https://vercel.com) → **Add New Project** → Import this repository
+2. Set **only** the Google Maps variables:
 
-### 2. Set environment variables
+| Variable | Description |
+|---|---|
+| `VITE_GOOGLE_MAPS_API_KEY` | Google Maps JS API key (restrict to your Vercel domain) |
+| `VITE_GOOGLE_MAPS_MAP_ID` | Google Maps Map ID (required for AdvancedMarkerElement) |
 
-In **Project Settings → Environment Variables**, add the following:
+Leave `VITE_JSON_FEED_URL`, `VITE_MAKE_WEBHOOK_URL`, and `VITE_AIRTABLE_FORM_URL` **empty** — the app will run in Demo Mode automatically.
+
+### Production deployment (with live client data)
 
 | Variable | Description |
 |---|---|
@@ -97,8 +107,6 @@ In **Project Settings → Environment Variables**, add the following:
 | `VITE_AIRTABLE_FORM_URL` | Airtable form base URL (Log Note prefill) |
 
 See `.env.example` for reference.
-
-### 3. Deploy
 
 Vercel builds automatically on every push to `main`. Manual deploy:
 

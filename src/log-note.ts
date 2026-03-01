@@ -1,5 +1,6 @@
 import config from './config';
 import { log, showToast } from './utils';
+import { isDemoMode } from './data';
 import type { Lead, KillSwitchPayload } from './types';
 
 const KILL_SWITCH_MAX_ATTEMPTS = 3;
@@ -22,6 +23,11 @@ async function postWithRetry(url: string, payload: KillSwitchPayload): Promise<v
 
 /** Fire kill switch: POST ghl_contact_id to Make Scenario C (retries up to 3x) */
 export function fireKillSwitch(lead: Lead): void {
+  if (isDemoMode) {
+    log('Demo mode: kill switch skipped');
+    return;
+  }
+
   const payload: KillSwitchPayload = {
     household_id: lead.id,
     ghl_contact_id: lead.ghl_contact_id,
@@ -38,6 +44,12 @@ export function fireKillSwitch(lead: Lead): void {
 
 /** Open Airtable form prefilled with lead data */
 export function openAirtableForm(lead: Lead): void {
+  if (isDemoMode) {
+    log('Demo mode: Airtable form skipped');
+    showToast('Demo mode — Log Note disabled', 'info');
+    return;
+  }
+
   const params = new URLSearchParams();
   params.set('prefill_Household ID', lead.id);
   params.set('prefill_GHL ID', lead.ghl_contact_id);

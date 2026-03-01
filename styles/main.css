@@ -130,6 +130,24 @@ html, body {
   background: #EF4444;
 }
 
+/* ---- Demo Banner ---- */
+#demo-banner {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  color: #FFD700;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  z-index: 500;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
 /* ---- Responsive Breakpoints ---- */
 
 /* iPhone SE (small) */

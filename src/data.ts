@@ -110,12 +110,17 @@ function isValidLead(lead: Lead): boolean {
 
 // ---- Data Fetching ----
 
-/** Fetch leads from JSON feed URL */
+export let isDemoMode = false;
+
+/** Fetch leads — falls back to /demo-data.json when no JSON_FEED_URL is configured */
 export async function fetchLeads(): Promise<Lead[]> {
-  log('Fetching leads from:', config.JSON_FEED_URL);
+  const url = config.JSON_FEED_URL || '/demo-data.json';
+  isDemoMode = !config.JSON_FEED_URL;
+
+  log(isDemoMode ? 'Demo mode: loading /demo-data.json' : 'Fetching leads from:', url);
 
   try {
-    const response = await fetch(config.JSON_FEED_URL, {
+    const response = await fetch(url, {
       headers: { Accept: 'application/json' },
     });
 
