@@ -2,11 +2,11 @@
 
 Mobile-first field map for real estate lead management — built for Driving for Dollars workflows.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-pounce--map--portfolio.vercel.app-000000?style=flat&logo=vercel&logoColor=white)](https://pounce-map-portfolio.vercel.app)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat&logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-7.x-646CFF?style=flat&logo=vite&logoColor=white)
 ![Google Maps](https://img.shields.io/badge/Google%20Maps%20JS%20API-weekly-4285F4?style=flat&logo=googlemaps&logoColor=white)
 ![PWA](https://img.shields.io/badge/PWA-ready-5A0FC8?style=flat&logo=pwa&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-deployed-000000?style=flat&logo=vercel&logoColor=white)
 
 > **This is the public portfolio version.** It runs in Demo Mode with sample leads — no real client data. See [CASE_STUDY.md](./CASE_STUDY.md) for the full project writeup.
 
@@ -166,3 +166,7 @@ Priority order (highest overrides all):
 
 **Levan (alias Mamiko) by MUT-i-GEN**
 GitHub: [@Mutigen](https://github.com/Mutigen)
+
+---
+
+**[→ Live Demo](https://pounce-map-portfolio.vercel.app) · [→ Case Study](./CASE_STUDY.md)**

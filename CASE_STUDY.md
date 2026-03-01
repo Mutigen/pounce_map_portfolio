@@ -76,6 +76,6 @@ The app is installed on agents' home screens. Offline tile caching via Workbox m
 
 ## Links
 
-- **Live Demo:** [pounce-map.vercel.app](https://pounce-map.vercel.app) *(sample data, no real leads)*
+- **Live Demo:** [pounce-map-portfolio.vercel.app](https://pounce-map-portfolio.vercel.app) *(sample data, no real leads)*
 - **GitHub:** [github.com/Mutigen/pounce_map_portfolio](https://github.com/Mutigen/pounce_map_portfolio)
 - **Built by:** Levan (alias Mamiko) · [github.com/Mutigen](https://github.com/Mutigen)
