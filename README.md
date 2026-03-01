@@ -10,6 +10,8 @@ Mobile-first field map for real estate lead management — built for Driving for
 
 > **This is the public portfolio version.** It runs in Demo Mode with sample leads — no real client data. See [CASE_STUDY.md](./CASE_STUDY.md) for the full project writeup.
 
+![Pounce Map Preview](./public/preview.png)
+
 ---
 
 ## Overview
